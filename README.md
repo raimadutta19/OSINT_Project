@@ -25,7 +25,7 @@ cd output
 streamlit run dashboard.py
 
 🌐 Live App
-▶️ Click here to view
+▶️ Streamlit App: https://osintproject-raimadutta.streamlit.app
 
 📌 Notes
 Replace harvester_mckvie.json with your own theHarvester output for other domains.
