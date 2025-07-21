@@ -3,7 +3,7 @@ import json
 import os
 
 def load_json_report():
-    file_path = os.path.join(os.path.dirname(__file__), "harvester_mckvie.json")
+    file_path = os.path.join(os.path.dirname(__file__), "output/harvester_mckvie.json")
     try:
         with open(file_path, "r") as file:
             return json.load(file)
