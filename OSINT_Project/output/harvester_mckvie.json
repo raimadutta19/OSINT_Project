@@ -1,0 +1,58 @@
+{
+    "asns": [
+        "AS16509"
+    ],
+    "cmd": "-d mckvie.edu.in -b all -f harvester_mckvie",
+    "emails": [
+        "admission@mckvie.edu.in",
+        "info@mckvie.edu.in",
+        "principal@mckvie.edu.in"
+    ],
+    "hosts": [
+        "*.mckvie.edu.in",
+        "admission.mckvie.edu.in",
+        "admission.mckvie.edu.in:162.144.16.170",
+        "admissions.mckvie.edu.in",
+        "alumni.mckvie.edu.in",
+        "alumni.mckvie.edu.in:192.185.77.68",
+        "mail.mckvie.edu.in",
+        "mail.mckvie.edu.in:162.144.16.170",
+        "mailq.mckvie.edu.in",
+        "mcms.mckvie.edu.in",
+        "mcms.mckvie.edu.in:162.144.16.170",
+        "mcmse.mckvie.edu.in",
+        "wwwm.mcms.mckvie.edu.in"
+    ],
+    "interesting_urls": [
+        "https://www.mckvie.edu.in/"
+    ],
+    "ips": [
+        "13.127.119.252",
+        "13.127.166.159",
+        "13.232.158.39",
+        "13.233.56.148",
+        "162.144.16.170",
+        "162.144.23.210",
+        "3.108.224.191",
+        "3.6.140.69",
+        "3.7.81.160",
+        "50.87.249.54",
+        "52.66.164.79",
+        "52.66.78.154",
+        "65.0.153.80",
+        "65.0.255.58",
+        "65.1.207.46",
+        "66.147.244.176"
+    ],
+    "shodan": [],
+    "subdomains": [
+        "www.mckvie.edu.in",
+        "admission.mckvie.edu.in",
+        "www.admission.mckvie.edu.in",
+        "admissions.mckvie.edu.in",
+        "alumni.mckvie.edu.in",
+        "mail.mckvie.edu.in",
+        "mcms.mckvie.edu.in",
+        "www.mcms.mckvie.edu.in"
+    ]
+}
