@@ -1,0 +1,27 @@
+{
+  "banner": {
+    "description": "WordPress Security Scanner by the WPScan Team",
+    "version": "3.8.28",
+    "authors": [
+      "@_WPScan_",
+      "@ethicalhack3r",
+      "@erwan_lr",
+      "@firefart"
+    ],
+    "sponsor": ""
+  },
+  "db_update_started": true,
+  "db_files_updated": [
+    "metadata.json",
+    "wp_fingerprints.json",
+    "timthumbs-v3.txt",
+    "config_backups.txt",
+    "db_exports.txt",
+    "dynamic_finders.yml",
+    "LICENSE",
+    "sponsor.txt"
+  ],
+  "db_update_finished": true,
+  "scan_aborted": "The URL supplied redirects to https://www.mckvie.edu.in/. Use the --ignore-main-redirect option to ignore the redirection and scan the target, or change the --url option value to the redirected URL.",
+  "target_url": "https://mckvie.edu.in/"
+}

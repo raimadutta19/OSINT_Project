@@ -1,0 +1,9 @@
+Server:		192.168.0.1
+Address:	192.168.0.1#53
+
+Non-authoritative answer:
+Name:	mckvie.edu.in
+Address: 3.6.229.29
+Name:	mckvie.edu.in
+Address: 15.207.10.156
+
