@@ -17,28 +17,28 @@ def load_json_report():
 
 def run_nslookup(domain):
     try:
-        output = subprocess.check_output(["nslookup", domain], text=True)
+        output = subprocess.check_output(["output/nslookup", domain], text=True)
         return output
     except Exception as e:
         return str(e)
 
 def run_whatweb(domain):
     try:
-        output = subprocess.check_output(["whatweb", domain], text=True)
+        output = subprocess.check_output(["output/whatweb", domain], text=True)
         return output
     except Exception as e:
         return str(e)
 
 def run_wpscan(domain):
     try:
-        output = subprocess.check_output(["wpscan", "--url", f"http://{domain}", "--no-update"], text=True)
+        output = subprocess.check_output(["output/wpscan", "--url", f"http://{domain}", "--no-update"], text=True)
         return output
     except Exception as e:
         return str(e)
 
 def run_nikto(domain):
     try:
-        output = subprocess.check_output(["nikto", "-host", domain], text=True)
+        output = subprocess.check_output(["output/nikto", "-host", domain], text=True)
         return output
     except Exception as e:
         return str(e)
