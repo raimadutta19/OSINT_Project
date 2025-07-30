@@ -66,6 +66,7 @@ git clone https://github.com/your-username/OSINT_Project.git
 cd OSINT_Project
 pip install -r requirements.txt
 streamlit run dashboard.py
+```
 
 🚀 Deployment
 This app is deployed using Streamlit Cloud.
