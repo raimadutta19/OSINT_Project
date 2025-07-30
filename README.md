@@ -79,9 +79,6 @@ Live Link:
 This project is intended solely for educational and demonstration purposes.
 No live scanning or probing of domains occurs within this app. It’s designed to help students understand how OSINT works using simulated outputs.
 
-📸 Screenshots
-(Add screenshots of your dashboard here)
-
 🙋‍♀️ Author
 Raima Dutta
 LinkedIn
