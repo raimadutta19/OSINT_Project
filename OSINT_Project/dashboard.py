@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import os
-import subprocess
 
 def load_json_report():
     file_path = os.path.join(os.path.dirname(__file__), "output/harvester_mckvie.json")
@@ -15,33 +14,15 @@ def load_json_report():
         st.error("❌ JSON decoding error. Please check the file format.")
         return {}
 
-def run_nslookup(domain):
+def read_static_output(file_name):
+    file_path = os.path.join(os.path.dirname(__file__), f"output/{file_name}")
     try:
-        output = subprocess.check_output(["nslookup", domain], text=True)
-        return output
+        with open(file_path, "r", encoding="utf-8") as file:
+            return file.read()
+    except FileNotFoundError:
+        return f"❌ {file_name} not found in output folder."
     except Exception as e:
-        return str(e)
-
-def run_whatweb(domain):
-    try:
-        output = subprocess.check_output(["whatweb", domain], text=True)
-        return output
-    except Exception as e:
-        return str(e)
-
-def run_wpscan(domain):
-    try:
-        output = subprocess.check_output(["wpscan", "--url", f"http://{domain}", "--no-update"], text=True)
-        return output
-    except Exception as e:
-        return str(e)
-
-def run_nikto(domain):
-    try:
-        output = subprocess.check_output(["nikto", "-host", domain], text=True)
-        return output
-    except Exception as e:
-        return str(e)
+        return f"❌ Error reading {file_name}: {str(e)}"
 
 def run_nessus_placeholder():
     return "Nessus integration is not CLI-based and requires authenticated API access, so manual analysis results can be uploaded instead."
@@ -78,35 +59,24 @@ def main():
             st.markdown(f"- {subdomain}")
     else:
         st.info("No subdomains found.")
-        
+
     # Additional Recon Tools
-    st.header("🛠️ Additional Reconnaissance Tools")
+    st.header("🛠️ Additional Reconnaissance Tool Outputs (Static)")
 
-    domain = st.text_input("Enter domain for additional recon tools", "mckvie.edu.in")
+    tool_outputs = {
+        "📄 nslookup Result": "nslookup_output.txt",
+        "📄 WhatWeb Result": "whatweb_output.txt",
+        "📄 WPScan Result": "wpscan_output.json",
+        "📄 Nikto Result": "nikto_output.txt",
+    }
 
-    if st.button("Run Recon Tools"):
-        with st.spinner("Running nslookup..."):
-            nslookup_result = run_nslookup(domain)
-            st.subheader("📄 nslookup Result")
-            st.code(nslookup_result)
+    for section_title, file_name in tool_outputs.items():
+        st.subheader(section_title)
+        result = read_static_output(file_name)
+        st.code(result)
 
-        with st.spinner("Running WhatWeb..."):
-            whatweb_result = run_whatweb(domain)
-            st.subheader("📄 WhatWeb Result")
-            st.code(whatweb_result)
-
-        with st.spinner("Running WPScan..."):
-            wpscan_result = run_wpscan(domain)
-            st.subheader("📄 WPScan Result")
-            st.code(wpscan_result)
-
-        with st.spinner("Running Nikto..."):
-            nikto_result = run_nikto(domain)
-            st.subheader("📄 Nikto Result")
-            st.code(nikto_result)
-
-        st.subheader("📄 Nessus")
-        st.info(run_nessus_placeholder())
+    st.subheader("📄 Nessus")
+    st.info(run_nessus_placeholder())
 
 if __name__ == "__main__":
     main()
