@@ -1,0 +1,192 @@
+{
+  "banner": {
+    "description": "WordPress Security Scanner by the WPScan Team",
+    "version": "3.8.28",
+    "authors": [
+      "@_WPScan_",
+      "@ethicalhack3r",
+      "@erwan_lr",
+      "@firefart"
+    ],
+    "sponsor": "Sponsored by Automattic - https://automattic.com/"
+  },
+  "start_time": 1763025694,
+  "start_memory": 61325312,
+  "target_url": "https://mckvie.edu.in/",
+  "target_ip": "13.234.101.79",
+  "effective_url": "https://mckvie.edu.in/",
+  "interesting_findings": [
+    {
+      "url": "https://mckvie.edu.in/",
+      "to_s": "Headers",
+      "type": "headers",
+      "found_by": "Headers (Passive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+        "Content-Security-Policy: upgrade-insecure-requests;",
+        "Server: Apache",
+        "X-Redirect-By: WordPress"
+      ]
+    },
+    {
+      "url": "https://mckvie.edu.in/xmlrpc.php",
+      "to_s": "XML-RPC seems to be enabled: https://mckvie.edu.in/xmlrpc.php",
+      "type": "xmlrpc",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "http://codex.wordpress.org/XML-RPC_Pingback_API"
+        ],
+        "metasploit": [
+          "auxiliary/scanner/http/wordpress_ghost_scanner",
+          "auxiliary/dos/http/wordpress_xmlrpc_dos",
+          "auxiliary/scanner/http/wordpress_xmlrpc_login",
+          "auxiliary/scanner/http/wordpress_pingback_access"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "https://mckvie.edu.in/readme.html",
+      "to_s": "WordPress readme found: https://mckvie.edu.in/readme.html",
+      "type": "readme",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "https://mckvie.edu.in/wp-content/mu-plugins/",
+      "to_s": "This site has 'Must Use Plugins': https://mckvie.edu.in/wp-content/mu-plugins/",
+      "type": "mu_plugins",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 80,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "http://codex.wordpress.org/Must_Use_Plugins"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "https://mckvie.edu.in/wp-cron.php",
+      "to_s": "The external WP-Cron seems to be enabled: https://mckvie.edu.in/wp-cron.php",
+      "type": "wp_cron",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 60,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "https://www.iplocation.net/defend-wordpress-from-ddos",
+          "https://github.com/wpscanteam/wpscan/issues/1299"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    }
+  ],
+  "version": {
+    "number": "5.9.2",
+    "release_date": "2022-03-11",
+    "status": "insecure",
+    "found_by": "Emoji Settings (Passive Detection)",
+    "confidence": 100,
+    "interesting_entries": [
+      "https://www.mckvie.edu.in/68d4a4e.html, Match: 'wp-includes\\/js\\/wp-emoji-release.min.js?ver=5.9.2'"
+    ],
+    "confirmed_by": {
+      "Meta Generator (Passive Detection)": {
+        "confidence": 60,
+        "interesting_entries": [
+          "https://www.mckvie.edu.in/68d4a4e.html, Match: 'WordPress 5.9.2'"
+        ]
+      }
+    },
+    "vulnerabilities": [
+
+    ]
+  },
+  "main_theme": null,
+  "plugins": {
+    "revslider": {
+      "slug": "revslider",
+      "location": "https://mckvie.edu.in/wp-content/plugins/revslider/",
+      "latest_version": "6.7.35",
+      "last_updated": "2025-07-04T23:34:02.000Z",
+      "outdated": true,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Meta Generator (Passive Detection)",
+      "confidence": 40,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "6.4.8",
+        "confidence": 100,
+        "found_by": "Meta Generator (Passive Detection)",
+        "interesting_entries": [
+          "https://www.mckvie.edu.in/68d4a4e.html, Match: 'Powered by Slider Revolution 6.4.8'"
+        ],
+        "confirmed_by": {
+          "Release Log (Aggressive Detection)": {
+            "confidence": 80,
+            "interesting_entries": [
+              "https://mckvie.edu.in/wp-content/plugins/revslider/release_log.html, Match: 'Version 6.4.8 (16th April 2021)'"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "config_backups": {
+
+  },
+  "vuln_api": {
+    "error": "No WPScan API Token given, as a result vulnerability data has not been output.\nYou can get a free API token with 25 daily requests by registering at https://wpscan.com/register"
+  },
+  "stop_time": 1763025766,
+  "elapsed": 72,
+  "requests_done": 169,
+  "cached_requests": 4,
+  "data_sent": 50951,
+  "data_sent_humanised": "49.757 KB",
+  "data_received": 825400,
+  "data_received_humanised": "806.055 KB",
+  "used_memory": 272285696,
+  "used_memory_humanised": "259.672 MB"
+}
