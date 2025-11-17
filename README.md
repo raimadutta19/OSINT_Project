@@ -2,7 +2,7 @@
 
 This project is a lightweight, educational **Open Source Intelligence (OSINT) Dashboard** built using **Python** and **Streamlit**. It visualizes pre-generated output from popular reconnaissance tools to simulate how real-world OSINT investigations are presented in a centralized interface.
 
-> 📌 **Live Demo:** [osintproject-raimadutta.streamlit.app](https://osintproject-raimadutta.streamlit.app)
+> 📌 **Live Demo:** https://osintproject-raimadutta.streamlit.app/
 
 ---
 
